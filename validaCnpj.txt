@@ -1,0 +1,213 @@
+﻿----------------------------------------------------------------------------------------
+NESTA PARTE DO ALGORITMO ESTA FAZENDO DA PRIMEIRA SOMA DOS NUMEROS 12 PRIMEIROS NUMEROS
+PRIMEIRA SOMA (SOMA 1)
+      (
+        VALUE(LEFT(cnpj__c,1))*5+
+        VALUE(MID(cnpj__c,2,1))*4+
+        VALUE(MID(cnpj__c,3,1))*3+
+        VALUE(MID(cnpj__c,4,1))*2+
+        VALUE(MID(cnpj__c,5,1))*9+
+        VALUE(MID(cnpj__c,6,1))*8+
+        VALUE(MID(cnpj__c,7,1))*7+
+        VALUE(MID(cnpj__c,8,1))*6+
+        VALUE(MID(cnpj__c,9,1))*5+
+        VALUE(MID(cnpj__c,10,1))*4+
+        VALUE(MID(cnpj__c,11,1))*3+
+        VALUE(MID(cnpj__c,12,1))*2+
+      )
+
+NESTA PARTE DO ALGORITMO ESTA FAZENDO DA PRIMEIRA SOMA DOS NUMEROS 13 PRIMEIROS NUMEROS
+SEGUNDA SOMA (SOMA 2)
+       (
+         VALUE(LEFT(cnpj__c,1))*6+
+         VALUE(MID(cnpj__c,2,1))*5+
+         VALUE(MID(cnpj__c,3,1))*4+
+         VALUE(MID(cnpj__c,4,1))*3+
+         VALUE(MID(cnpj__c,5,1))*2+
+         VALUE(MID(cnpj__c,6,1))*9+
+         VALUE(MID(cnpj__c,7,1))*8+
+         VALUE(MID(cnpj__c,8,1))*7+
+         VALUE(MID(cnpj__c,9,1))*6+
+         VALUE(MID(cnpj__c,10,1))*5+
+         VALUE(MID(cnpj__c,11,1))*4+
+         VALUE(MID(cnpj__c,12,1))*3+
+         VALUE(MID(cnpj__c,13,1))*2+
+       )
+---------------------------------------------------------------------------------------
+NESTA PRIMEIRA CONDICIONAL ELE VERIFICA SE O RESTO DO DO MOD É MENOR QUE DOIS (LINHA 42) E DEFINE
+QUE O PRIMEIRO DIGITO EQUIVALE A 0 (LINHA 43). CASO NAO ELE VERIFICA SE 11 - MOD DA SOMA 1 É IGUAL
+AO DIGITO INSERIDO PELO USUARIO (LINHA 44).
+PRIMEIRA CONDICIONAL - COMPARACAO DIGITO 1
+IF(
+    MOD(SOMA 1,11) < 2,
+    MID(cnpj__c,13,1) == 0,
+    11 - MOD(SOMA 1,11)  == MID(cnpj__c,13,1)
+  )
+
+*******************************************
+CONDICIONAL FORMADA
+IF(
+    MOD(
+        (
+          VALUE(LEFT(cnpj__c,1))*5+
+          VALUE(MID(cnpj__c,2,1))*4+
+          VALUE(MID(cnpj__c,3,1))*3+
+          VALUE(MID(cnpj__c,4,1))*2+
+          VALUE(MID(cnpj__c,5,1))*9+
+          VALUE(MID(cnpj__c,6,1))*8+
+          VALUE(MID(cnpj__c,7,1))*7+
+          VALUE(MID(cnpj__c,8,1))*6+
+          VALUE(MID(cnpj__c,9,1))*5+
+          VALUE(MID(cnpj__c,10,1))*4+
+          VALUE(MID(cnpj__c,11,1))*3+
+          VALUE(MID(cnpj__c,12,1))*2+
+        ),11) < 2,
+    MID(cnpj__c,13,1) == 0,
+    11 - MOD(
+              (
+                  VALUE(LEFT(cnpj__c,1))*6+
+                  VALUE(MID(cnpj__c,2,1))*5+
+                  VALUE(MID(cnpj__c,3,1))*4+
+                  VALUE(MID(cnpj__c,4,1))*3+
+                  VALUE(MID(cnpj__c,5,1))*2+
+                  VALUE(MID(cnpj__c,6,1))*9+
+                  VALUE(MID(cnpj__c,7,1))*8+
+                  VALUE(MID(cnpj__c,8,1))*7+
+                  VALUE(MID(cnpj__c,9,1))*6+
+                  VALUE(MID(cnpj__c,10,1))*5+
+                  VALUE(MID(cnpj__c,11,1))*4+
+                  VALUE(MID(cnpj__c,12,1))*3+
+                  VALUE(MID(cnpj__c,13,1))*2+
+              ),11) == MID(cnpj__c,13,1)
+  )
+---------------------------------------------------------------------------------------
+NESTA PRIMEIRA CONDICIONAL ELE VERIFICA SE O RESTO DO DO MOD É MENOR QUE DOIS (LINHA 90) E DEFINE
+QUE O PRIMEIRO DIGITO EQUIVALE A 0 (LINHA 91). CASO NAO ELE VERIFICA SE 11 - MOD DA SOMA 1 É IGUAL
+AO DIGITO INSERIDO PELO USUARIO (LINHA 92).
+PRIMEIRA CONDICIONAL - COMPARACAO DIGITO 1
+SEGUNDA CONDICIONAL - COMPARACAO DIGITO 2
+IF(
+    MOD(SOMA 2,11) < 2,
+    MID(cnpj__c,14,1) == 0,
+    11 - MOD(SOMA 2,11)  == RIGHT(cnpj__c,1)
+  )
+
+*************************************************
+  SEGUNDA CONDICIONAL FORMADA
+  IF(
+      MOD(
+            (
+               VALUE(LEFT(cnpj__c,1))*6+
+               VALUE(MID(cnpj__c,2,1))*5+
+               VALUE(MID(cnpj__c,3,1))*4+
+               VALUE(MID(cnpj__c,4,1))*3+
+               VALUE(MID(cnpj__c,5,1))*2+
+               VALUE(MID(cnpj__c,6,1))*9+
+               VALUE(MID(cnpj__c,7,1))*8+
+               VALUE(MID(cnpj__c,8,1))*7+
+               VALUE(MID(cnpj__c,9,1))*6+
+               VALUE(MID(cnpj__c,10,1))*5+
+               VALUE(MID(cnpj__c,11,1))*4+
+               VALUE(MID(cnpj__c,12,1))*3+
+               VALUE(MID(cnpj__c,13,1))*2+
+            ),11) < 2,
+      MID(cnpj__c,14,1) == 0,
+      11 - MOD(
+                (
+                    VALUE(LEFT(cnpj__c,1))*6+
+                    VALUE(MID(cnpj__c,2,1))*5+
+                    VALUE(MID(cnpj__c,3,1))*4+
+                    VALUE(MID(cnpj__c,4,1))*3+
+                    VALUE(MID(cnpj__c,5,1))*2+
+                    VALUE(MID(cnpj__c,6,1))*9+
+                    VALUE(MID(cnpj__c,7,1))*8+
+                    VALUE(MID(cnpj__c,8,1))*7+
+                    VALUE(MID(cnpj__c,9,1))*6+
+                    VALUE(MID(cnpj__c,10,1))*5+
+                    VALUE(MID(cnpj__c,11,1))*4+
+                    VALUE(MID(cnpj__c,12,1))*3+
+                    VALUE(MID(cnpj__c,13,1))*2+
+                 ),11)  == MID(cnpj__c,14,1)
+    )
+---------------------------------------------------------------------------------------\
+FORMULA VALIDACAO
+IF(
+    AND(COND1,COND2),
+    FALSE,TRUE
+  )
+***************************
+FORMULA FINAL FORMADA
+IF(
+    AND(
+        IF(
+            MOD(
+                (
+                  VALUE(LEFT(cnpj__c,1))*5+
+                  VALUE(MID(cnpj__c,2,1))*4+
+                  VALUE(MID(cnpj__c,3,1))*3+
+                  VALUE(MID(cnpj__c,4,1))*2+
+                  VALUE(MID(cnpj__c,5,1))*9+
+                  VALUE(MID(cnpj__c,6,1))*8+
+                  VALUE(MID(cnpj__c,7,1))*7+
+                  VALUE(MID(cnpj__c,8,1))*6+
+                  VALUE(MID(cnpj__c,9,1))*5+
+                  VALUE(MID(cnpj__c,10,1))*4+
+                  VALUE(MID(cnpj__c,11,1))*3+
+                  VALUE(MID(cnpj__c,12,1))*2
+                ),11) < 2,
+            VALUE(MID(cnpj__c,13,1)) == 0,
+            11 - MOD(
+                      (
+                          VALUE(LEFT(cnpj__c,1))*6+
+                          VALUE(MID(cnpj__c,2,1))*5+
+                          VALUE(MID(cnpj__c,3,1))*4+
+                          VALUE(MID(cnpj__c,4,1))*3+
+                          VALUE(MID(cnpj__c,5,1))*2+
+                          VALUE(MID(cnpj__c,6,1))*9+
+                          VALUE(MID(cnpj__c,7,1))*8+
+                          VALUE(MID(cnpj__c,8,1))*7+
+                          VALUE(MID(cnpj__c,9,1))*6+
+                          VALUE(MID(cnpj__c,10,1))*5+
+                          VALUE(MID(cnpj__c,11,1))*4+
+                          VALUE(MID(cnpj__c,12,1))*3+
+                          VALUE(MID(cnpj__c,13,1))*2
+                      ),11) == VALUE(MID(cnpj__c,13,1))
+          ),
+            IF(
+                  MOD(
+                        (
+                           VALUE(LEFT(cnpj__c,1))*6+
+                           VALUE(MID(cnpj__c,2,1))*5+
+                           VALUE(MID(cnpj__c,3,1))*4+
+                           VALUE(MID(cnpj__c,4,1))*3+
+                           VALUE(MID(cnpj__c,5,1))*2+
+                           VALUE(MID(cnpj__c,6,1))*9+
+                           VALUE(MID(cnpj__c,7,1))*8+
+                           VALUE(MID(cnpj__c,8,1))*7+
+                           VALUE(MID(cnpj__c,9,1))*6+
+                           VALUE(MID(cnpj__c,10,1))*5+
+                           VALUE(MID(cnpj__c,11,1))*4+
+                           VALUE(MID(cnpj__c,12,1))*3+
+                           VALUE(MID(cnpj__c,13,1))*2
+                        ),11) < 2,
+                  VALUE(MID(cnpj__c,14,1)) == 0,
+                  11 - MOD(
+                            (
+                                VALUE(LEFT(cnpj__c,1))*6+
+                                VALUE(MID(cnpj__c,2,1))*5+
+                                VALUE(MID(cnpj__c,3,1))*4+
+                                VALUE(MID(cnpj__c,4,1))*3+
+                                VALUE(MID(cnpj__c,5,1))*2+
+                                VALUE(MID(cnpj__c,6,1))*9+
+                                VALUE(MID(cnpj__c,7,1))*8+
+                                VALUE(MID(cnpj__c,8,1))*7+
+                                VALUE(MID(cnpj__c,9,1))*6+
+                                VALUE(MID(cnpj__c,10,1))*5+
+                                VALUE(MID(cnpj__c,11,1))*4+
+                                VALUE(MID(cnpj__c,12,1))*3+
+                                VALUE(MID(cnpj__c,13,1))*2
+                             ),11)  == VALUE(MID(cnpj__c,14,1))
+                )
+        ),
+    FALSE,TRUE
+  )
