@@ -1,0 +1,31 @@
+IF(
+   11-MOD(
+        (
+        VALUE( LEFT(cpf__c, 1))*10 +
+        VALUE( MID(cpf__c, 2, 1) )*9+
+        VALUE( MID(cpf__c, 3, 1) )*8+
+        VALUE( MID(cpf__c, 4, 1) )*7+
+        VALUE( MID(cpf__c, 5, 1) )*6+
+        VALUE( MID(cpf__c, 6, 1) )*5+
+        VALUE( MID(cpf__c, 7, 1) )*4+
+        VALUE( MID(cpf__c, 8, 1) )*3+
+        VALUE( MID(cpf__c, 9, 1) )*2
+    ),11
+    )!= VALUE(MID( cpf__c,10,1)), true,
+    IF(
+        11-MOD(
+        (
+        VALUE( LEFT(cpf__c, 1))*11 +
+        VALUE( MID(cpf__c, 2, 1) )*10+
+        VALUE( MID(cpf__c, 3, 1) )*9+
+        VALUE( MID(cpf__c, 4, 1) )*8+
+        VALUE( MID(cpf__c, 5, 1) )*7+
+        VALUE( MID(cpf__c, 6, 1) )*6+
+        VALUE( MID(cpf__c, 7, 1) )*5+
+        VALUE( MID(cpf__c, 8, 1) )*4+
+        VALUE( MID(cpf__c, 9, 1) )*3+
+        VALUE( MID(cpf__c, 10, 1) )*2
+    ),11
+    ) != VALUE(RIGHT(cpf__c, 1)), true, false
+  )
+)

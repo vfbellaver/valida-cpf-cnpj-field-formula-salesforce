@@ -1,0 +1,11 @@
+﻿IF( cpf__c == '00000000000', true,
+IF( cpf__c == '11111111111', true,
+IF( cpf__c == '22222222222', true,
+IF( cpf__c == '33333333333', true,
+IF( cpf__c == '44444444444', true,
+IF( cpf__c == '55555555555', true,
+IF( cpf__c == '66666666666', true,
+IF( cpf__c == '77777777777', true,
+IF( cpf__c == '88888888888', true,
+IF( cpf__c == '99999999999', true, false
+))))))))))

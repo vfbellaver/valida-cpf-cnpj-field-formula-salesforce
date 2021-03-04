@@ -1,0 +1,65 @@
+IF(
+AND(
+IF(MOD((
+VALUE(LEFT(cnpj__c,1))*5+
+VALUE(MID(cnpj__c,2,1))*4+
+VALUE(MID(cnpj__c,3,1))*3+
+VALUE(MID(cnpj__c,4,1))*2+
+VALUE(MID(cnpj__c,5,1))*9+
+VALUE(MID(cnpj__c,6,1))*8+
+VALUE(MID(cnpj__c,7,1))*7+
+VALUE(MID(cnpj__c,8,1))*6+
+VALUE(MID(cnpj__c,9,1))*5+
+VALUE(MID(cnpj__c,10,1))*4+
+VALUE(MID(cnpj__c,11,1))*3+
+VALUE(MID(cnpj__c,12,1))*2
+),11) < 2,
+VALUE(MID(cnpj__c,13,1)) == 0,
+11 - MOD((
+VALUE(LEFT(cnpj__c,1))*5+
+VALUE(MID(cnpj__c,2,1))*4+
+VALUE(MID(cnpj__c,3,1))*3+
+VALUE(MID(cnpj__c,4,1))*2+
+VALUE(MID(cnpj__c,5,1))*9+
+VALUE(MID(cnpj__c,6,1))*8+
+VALUE(MID(cnpj__c,7,1))*7+
+VALUE(MID(cnpj__c,8,1))*6+
+VALUE(MID(cnpj__c,9,1))*5+
+VALUE(MID(cnpj__c,10,1))*4+
+VALUE(MID(cnpj__c,11,1))*3+
+VALUE(MID(cnpj__c,12,1))*2
+),11) == VALUE(MID(cnpj__c,13,1))),
+IF(MOD((
+VALUE(LEFT(cnpj__c,1))*6+
+VALUE(MID(cnpj__c,2,1))*5+
+VALUE(MID(cnpj__c,3,1))*4+
+VALUE(MID(cnpj__c,4,1))*3+
+VALUE(MID(cnpj__c,5,1))*2+
+VALUE(MID(cnpj__c,6,1))*9+
+VALUE(MID(cnpj__c,7,1))*8+
+VALUE(MID(cnpj__c,8,1))*7+
+VALUE(MID(cnpj__c,9,1))*6+
+VALUE(MID(cnpj__c,10,1))*5+
+VALUE(MID(cnpj__c,11,1))*4+
+VALUE(MID(cnpj__c,12,1))*3+
+VALUE(MID(cnpj__c,13,1))*2
+),11) < 2,
+VALUE(MID(cnpj__c,14,1)) == 0,
+11 - MOD((
+VALUE(LEFT(cnpj__c,1))*6+
+VALUE(MID(cnpj__c,2,1))*5+
+VALUE(MID(cnpj__c,3,1))*4+
+VALUE(MID(cnpj__c,4,1))*3+
+VALUE(MID(cnpj__c,5,1))*2+
+VALUE(MID(cnpj__c,6,1))*9+
+VALUE(MID(cnpj__c,7,1))*8+
+VALUE(MID(cnpj__c,8,1))*7+
+VALUE(MID(cnpj__c,9,1))*6+
+VALUE(MID(cnpj__c,10,1))*5+
+VALUE(MID(cnpj__c,11,1))*4+
+VALUE(MID(cnpj__c,12,1))*3+
+VALUE(MID(cnpj__c,13,1))*2
+),11) == VALUE(MID(cnpj__c,14,1)))
+),
+FALSE,TRUE
+)
